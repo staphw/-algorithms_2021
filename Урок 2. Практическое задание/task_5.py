@@ -21,3 +21,11 @@
 Решите через рекурсию. Решение через цикл не принимается.
 Для оценки Отлично в этом блоке необходимо выполнить 5 заданий из 7
 """
+
+
+def symbols(n=32, symbols_string=""):
+	symbols_string += str(n) + " - " + chr(n) + " " if n % 10 != 1 else str(n) + " - " + chr(n) + "\n"
+	return symbols(n + 1, symbols_string) if n < 127 else symbols_string
+	
+	
+print(symbols())

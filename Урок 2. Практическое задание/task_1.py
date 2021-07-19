@@ -28,3 +28,31 @@
 Решите через рекурсию. Решение через цикл не принимается.
 Для оценки Отлично в этом блоке необходимо выполнить 5 заданий из 7
 """
+
+
+def calculate():
+	operation = input("Введите операцию (+, -, *, / или 0 для выхода): ")
+	
+	if operation == "0":
+		return
+	elif operation == "+" or operation == "-" or operation == "*" or operation == "/":
+		try:
+			first_num = float(input("Введите первое число: "))
+			second_num = float(input("Введите второе число: "))
+		except ValueError:
+			print("Некорректный ввод!")
+		else:
+			if operation == "+":
+				print("Ваш результат: ", first_num + second_num)
+			elif operation == "-":
+				print("Ваш результат: ", first_num - second_num)
+			elif operation == "*":
+				print("Ваш результат: ", first_num * second_num)
+			elif operation == "/":
+				print("Ваш результат: {}".format(first_num / second_num) if second_num else "На ноль делить нельзя!" )
+	else:	
+		print("Некорректный ввод!")
+		
+	calculate()
+	
+calculate()

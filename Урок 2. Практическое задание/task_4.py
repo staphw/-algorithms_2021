@@ -15,3 +15,11 @@
 Решите через рекурсию. Решение через цикл не принимается.
 Для оценки Отлично в этом блоке необходимо выполнить 5 заданий из 7
 """
+
+
+def sum_numbers(n, number=1, sum_number=0):
+	return sum_numbers(n - 1, -0.5 * number, sum_number + number) if n > 0 else sum_number
+	
+	
+print(sum_numbers(4))
+	

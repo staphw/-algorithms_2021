@@ -16,3 +16,11 @@
 Решите через рекурсию. Решение через цикл не принимается.
 Для оценки Отлично в этом блоке необходимо выполнить 5 заданий из 7
 """
+
+
+def sum_numbers(number, sum_number=0):
+	return sum_numbers(number - 1, sum_number + number) if number > 0 else sum_number
+	
+n = 10
+print(sum_numbers(n))
+print(int(n * (n + 1) / 2))
